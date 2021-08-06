@@ -7,14 +7,19 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
-''Private Sub Worksheet_Activate()
-'Private Sub Workbook_Open()
-'
-'Application.DisplayFullScreen = True
-'Sheets("Main Sheet").Activate
-'Range("A100").Activate
-'Range("A63").Activate
-'Range("A37").Activate
-'Application.ScreenUpdating = True
-'
-'End Sub
+Option Explicit
+
+Private Sub Workbook_Activate()
+SetUI
+End Sub
+
+Private Sub Workbook_Deactivate()
+SetUI
+End Sub
+
+Private Sub Workbook_Open()
+
+'MyTag = "show"
+SetUI
+
+End Sub

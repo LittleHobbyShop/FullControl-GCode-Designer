@@ -1,3 +1,55 @@
-<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui">
-
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="RibbonOnLoad">
+	<ribbon>
+		<tabs>
+			<tab id="tbFullControl" label="FullControl" getVisible="GetVisible" tag = "Persist">
+				<group id="gpAbout" label="About" tag = "Persist">
+					<button id="btAbout" label="About" size="large" onAction = "uiAbout" image = "FullControlIcon"/>
+				</group>
+				<group id = "gpSettings" label = "Options" tag = "Persist">
+				    <menu id = "btSettings" size = "large" imageMso = "ComAddInsDialog">
+				        <button id = "btSwitchControls" label = "Switch Controls" onAction = "uiSwitchControls"/>
+				    </menu>
+				</group>
+				<group id = "gpDesign" label = "Designs">
+				    <button id="btSave" label="Save" size="large" onAction = "uiSave" imageMso = "FileSave"/>
+				    <button id="btLoad" label="Load" size="large" onAction = "uiLoad" imageMso = "GetExternalDataImportClassic"/>
+				</group>
+				<group id= "gpFeatures" label="Features">
+				    <menu
+						id="mnAddFeature"
+						label="Add Feature"
+						size="large"
+						imageMso = "AdpDiagramAddTable">
+						<button id = "btLineCartesian" label = "Line (cartesian)" onAction="uiLineCartesian"/>
+                        <button id = "btLinePolar" label = "Line (polar)" onAction="uiLinePolar"/>
+                        <button id = "btLineEquation" label = "Line equation" onAction="uiLineEquation"/>
+                        <button id = "btLineEquationPolar" label = "Line equation polar" onAction="uiLineEquationPolar"/>
+                        <button id = "btCircleArc" label = "Circle/arc" onAction="uiCircleArc"/>
+                        <button id = "btRectangle" label = "Rectangle" onAction="uiRectangle"/>
+                        <button id = "btPolygon" label = "Polygon" onAction="uiPolygon"/>
+                        <menuSeparator  id="sp1" />
+                        <button id = "btCartesianRepeat" label = "Cartesian repeat" onAction="uiCartesianRepeat"/>
+                        <button id = "btPolarRepeat" label = "Polar repeat" onAction="uiPolarRepeat"/>
+                        <button id = "btReflectXY" label = "Reflect (XY)" onAction="uiReflectXY"/>
+                        <button id = "btReflectPolar" label = "Reflect (polar)" onAction="uiReflectPolar"/>
+                        <button id = "btReflectZ" label = "Reflect (Z)" onAction="uiReflectZ"/>
+                        <button id = "btConcentricRepeat" label = "Concentric repeat (only for rectangle)" onAction="uiConcentricRepeat"/>
+                        <button id = "btReproduceRecalculate" label = "Reproduce and recalculate" onAction="uiReproduceRecalculate"/>
+                        <menuSeparator  id="sp2" />
+                        <button id = "btRetraction" label = "Retraction" onAction="uiRetraction"/>
+                        <button id = "btCustomGCODE" label = "Custom GCODE" onAction="uiCustomGCODE"/>
+                        <menuSeparator  id="sp3" />
+                        <button id = "btRepeatRule" label = "Repeat rule" onAction="uiRepeatRule"/>
+                        <button id = "btPostprocess" label = "Postprocess" onAction="uiPostprocess"/>
+					</menu >
+				    <button id="btSkipStopUse" label="Skip/Stop/Use" size="large" onAction="uiSkipStopUse" imageMso = "MacroRecorderPause"/>
+				    <button id="btParameters" label="Assign Parameters" size="large" onAction="uiAssignParameters" imageMso = "NameCreateFromSelection" />
+				</group>
+				<group id = "gpOutput" label = "Output">
+				    <button id="btGenerateGCODE" label="GCODE to clipboard" size="large" onAction="uiGenerateGCODE" imageMso = "ShowClipboard"/>
+				</group>
+				
+			</tab>
+		</tabs>
+	</ribbon>
 </customUI>

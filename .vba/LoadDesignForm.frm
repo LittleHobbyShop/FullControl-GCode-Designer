@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} LoadDesignForm 
    Caption         =   "Load Design"
-   ClientHeight    =   5887
+   ClientHeight    =   5880
    ClientLeft      =   96
    ClientTop       =   408
    ClientWidth     =   4296
